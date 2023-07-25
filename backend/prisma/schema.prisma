@@ -1,0 +1,23 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Invoices {
+  id                                  Int      @id @default(autoincrement())
+  numberClient                        Int
+  referenceMonth                      Int
+  dueDate                             String
+  electricity                         Int
+  injectedEnergyHFP                   Int
+  compSICMS                           Int
+  contributionMunicipalPublicLighting Int
+  amount                              Int
+  createdAt                           DateTime @default(now())
+
+  @@map("invoices")
+}
