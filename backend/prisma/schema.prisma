@@ -14,7 +14,7 @@ model Invoices {
   dueDate                             String
   electricity                         Int
   injectedEnergyHFP                   Int
-  compSICMS                           Int
+  compsICMS                           Int
   contributionMunicipalPublicLighting Int
   amount                              Int
   createdAt                           DateTime @default(now())
